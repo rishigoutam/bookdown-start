@@ -1,3 +1,7 @@
-# Technical Details
+# Build and Deploy
 
-Now I'll teach you some crazy math, but I need to work it out first...
+0. Setup GitHub pages. See [this blog](https://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html)
+1. Run `bookdown::render_book("index.Rmd")` in RStudio
+2. git add, commit, push
+
+
