@@ -1,0 +1,115 @@
+# Syntax
+
+## Basic
+
+You can make text italic by surrounding it with underscores or asterisks, e.g., _text_ or *text*. For bold text, use two underscores (__text__) or asterisks (**text**). Text surrounded by ~ will be converted to a subscript (e.g., H~2~SO~4~ renders H2SO4), and similarly, two carets (^) produce a superscript (e.g., Fe^2+^ renders Fe2+). To mark text as inline code, use a pair of backticks, e.g., `code`.3 Small caps can be produced by the HTML tag span, e.g., <span style="font-variant:small-caps;">Small Caps</span> renders Small Caps. Links are created using [text](link), e.g., [RStudio](https://www.rstudio.com). Footnotes are put inside the square brackets after a caret ^[], e.g., ^[This is a footnote.]. 
+
+Blockquotes are possible
+
+> "Rishi likes blockquotes a lot. If anyone thinks blockquotes 
+are useless, they are incorrect and should rethink their priorities
+and go do something else
+>
+> --- "Rishi Goutam"
+
+```
+This is a code block with no language
+specified at all
+```
+
+    This is also a code block
+    
+## Headers
+
+### H3
+
+#### H4
+
+##### You should really not use H5s...
+
+## This header is not numbered {-}
+
+## Math
+$$e^{\pi i} + 1 = 0$$
+$$X = \begin{bmatrix}1 & x_{1}\\
+1 & x_{2}\\
+1 & x_{3}
+\end{bmatrix}$$
+
+$$\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}=ad-bc$$
+
+We can number an equation
+\begin{equation}
+  e^{\pi i} + 1 = 0
+  (\#eq:epi)
+\end{equation}
+
+and refer to it \@ref(eq:epi)
+
+## Special custom blocks
+
+Bookdown provides some special handling for custom blocks, such as `theorem` and `example`. See [here](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#theorems) for the full list
+
+::: {.theorem #pyth name="Pythagorean theorem"}
+For a right triangle, if $c$ denotes the length of the hypotenuse
+and $a$ and $b$ denote the lengths of the other two sides, we have
+$$a^2 + b^2 = c^2$$
+:::
+
+We can refer to a named `theorem`. Remember trig theorem \@ref(thm:pyth)
+
+## Tables
+
+We can have tables
+
+```{r table-single, echo=FALSE}
+knitr::kable(
+  head(mtcars[, 1:8], 10), booktabs = TRUE,
+  caption = 'A table of the first 10 rows of the mtcars data.'
+)
+```
+
+```{r iris, echo=FALSE}
+knitr::kable(
+  list(
+    head(iris[, 1:2], 3),
+    head(mtcars[, 1:3], 5)
+  ),
+  caption = 'A Tale of Two Tables.', booktabs = TRUE
+)
+```
+
+
+## Figures {#figures}
+
+
+```{r cars-plot, out.width='70%', fig.cap='A figure example with a relative width 70\\%.'}
+par(mar = c(4, 4, .1, .1))
+plot(cars, pch = 19)
+```
+
+
+```{r memoji, out.width='32.8%', fig.cap='Memoji of Rishi Goutam'}
+knitr::include_graphics(rep('memoji.png'))
+```
+
+
+## HTML Widgets
+
+See [htmlwidgets](https://www.htmlwidgets.org/)
+
+We can also use JavaScript libraries for rich data visualizations. Install the below for outputting to non-HTML files.
+
+```
+install.packages("webshot")
+webshot::install_phantomjs()
+```
+
+We use the DT package to show the iris dataset:
+
+```{r DT-demo, fig.cap='A table widget rendered via the DT package.'}
+DT::datatable(iris)
+```
+
