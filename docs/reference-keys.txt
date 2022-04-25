@@ -24,3 +24,4 @@ building
 deploying
 github-pages
 bookdown.org
+resources
