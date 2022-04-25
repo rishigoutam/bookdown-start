@@ -20,3 +20,7 @@ tables
 figures
 html-widgets
 build-and-deploy
+building
+deploying
+github-pages
+bookdown.org

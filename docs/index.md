@@ -1,7 +1,7 @@
 --- 
 title: "A Rishi Bookdown Book"
 author: "Rishi Goutam"
-date: "2022-04-24"
+date: "2022-04-25"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

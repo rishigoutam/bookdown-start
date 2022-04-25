@@ -23,7 +23,7 @@
 <meta name="author" content="Rishi Goutam" />
 
 
-<meta name="date" content="2022-04-24" />
+<meta name="date" content="2022-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -182,7 +182,15 @@ div.csl-indent {
 <li class="chapter" data-level="2.6" data-path="syntax.html"><a href="syntax.html#figures"><i class="fa fa-check"></i><b>2.6</b> Figures</a></li>
 <li class="chapter" data-level="2.7" data-path="syntax.html"><a href="syntax.html#html-widgets"><i class="fa fa-check"></i><b>2.7</b> HTML Widgets</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="build-and-deploy.html"><a href="build-and-deploy.html"><i class="fa fa-check"></i><b>3</b> Build and Deploy</a></li>
+<li class="chapter" data-level="3" data-path="build-and-deploy.html"><a href="build-and-deploy.html"><i class="fa fa-check"></i><b>3</b> Build and Deploy</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="build-and-deploy.html"><a href="build-and-deploy.html#building"><i class="fa fa-check"></i><b>3.1</b> Building</a></li>
+<li class="chapter" data-level="3.2" data-path="build-and-deploy.html"><a href="build-and-deploy.html#deploying"><i class="fa fa-check"></i><b>3.2</b> Deploying</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="build-and-deploy.html"><a href="build-and-deploy.html#github-pages"><i class="fa fa-check"></i><b>3.2.1</b> GitHub pages</a></li>
+<li class="chapter" data-level="3.2.2" data-path="build-and-deploy.html"><a href="build-and-deploy.html#bookdown.org"><i class="fa fa-check"></i><b>3.2.2</b> bookdown.org</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -205,13 +213,26 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="build-and-deploy" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Build and Deploy<a href="build-and-deploy.html#build-and-deploy" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="building" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Building<a href="build-and-deploy.html#building" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can build a PDF, epub, or HTML of the book. By default, we will use the <code>gitbook</code> style but there are others such as <code>tufte</code>.</p>
+<p>An epub can converted to the older Kindle format (MOBI) using tools such as Calibre. For the newer Kindle File Format (.azw, .azw3, .kfx file formats) you can find and use <a href="https://www.amazon.com/Kindle-Previewer/b?node=21381691011">other</a> <a href="https://epub2kindle.com/">tools</a>.</p>
+<p>To build a book locally in RStudio, click <code>Builds</code> &gt; <code>Configure Build Tools...</code> &gt; Select desired output format.</p>
+<p>Cmd+Shift+B builds the PDF, epub, or HTML.</p>
+</div>
+<div id="deploying" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Deploying<a href="build-and-deploy.html#deploying" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="github-pages" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> GitHub pages<a href="build-and-deploy.html#github-pages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol start="0" style="list-style-type: decimal">
 <li>Setup GitHub pages. See <a href="https://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html">this blog</a></li>
 <li>Run <code>bookdown::render_book("index.Rmd")</code> in RStudio</li>
 <li>git add, commit, push</li>
 </ol>
 <p>Now open the GitHub pages link and the book should be there. Open <a href="https://rishigoutam.github.io/bookdown-start/index.html" class="uri">https://rishigoutam.github.io/bookdown-start/index.html</a></p>
-<p>(Optional)</p>
+</div>
+<div id="bookdown.org" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> bookdown.org<a href="build-and-deploy.html#bookdown.org" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Publish to bookdown.org via rsconnect</p>
 <ol start="3" style="list-style-type: decimal">
 <li><code>bookdown::render_book("index.Rmd")</code></li>
@@ -221,6 +242,8 @@ div.csl-indent {
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div class="csl-entry">
 Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -279,7 +302,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["rishi-bookdown-start.pdf", "rishi-bookdown-start.epub"],
 "search": {
 "engine": "fuse",
 "options": null
