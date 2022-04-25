@@ -10,6 +10,8 @@ To build a book locally in RStudio, click `Builds` > `Configure Build Tools...` 
 
 Cmd+Shift+B builds the PDF, epub, or HTML.
 
+Or, in the RStudio console, run `bookdown::render_book("index.Rmd")`
+
 ## Deploying
 
 ### GitHub pages

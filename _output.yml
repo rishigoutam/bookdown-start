@@ -7,7 +7,7 @@ bookdown::gitbook:
       before: |
         <li><a href="./">A Rishi Bookdown Book</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><a href="github.com/rishigoutam/bookdown-start" target="blank">View book source</a></li>
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
