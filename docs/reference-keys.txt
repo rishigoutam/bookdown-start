@@ -19,3 +19,4 @@ special-custom-blocks
 tables
 figures
 html-widgets
+build-and-deploy

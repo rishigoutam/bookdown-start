@@ -1,7 +1,0 @@
-# Build and Deploy
-
-0. Setup GitHub pages. See [this blog](https://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html)
-1. Run `bookdown::render_book("index.Rmd")` in RStudio
-2. git add, commit, push
-
-
